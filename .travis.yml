@@ -1,4 +1,3 @@
-language: c
 env:
   global:
   - COMMIT=${TRAVIS_COMMIT::8}
