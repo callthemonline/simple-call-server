@@ -16,6 +16,6 @@ RUN apt-get install -y freeswitch freeswitch-mod-rtc \
 	freeswitch-mod-curl freeswitch-mod-tone-stream
 
 COPY etc/freeswitch /etc/freeswitch
-#COPY sounds /usr/share/freeswitch/sounds
+COPY sounds /usr/share/freeswitch/sounds
 
 ENTRYPOINT ["/usr/bin/freeswitch", "-u", "freeswitch", "-g", "freeswitch", "-nonat"]
