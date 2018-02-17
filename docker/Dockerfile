@@ -1,6 +1,6 @@
 FROM debian:jessie-slim
 
-RUN apt update; apt install -y wget gnupg
+RUN apt update; apt install -y wget gnupg nano tcpdump
 RUN wget http://files.freeswitch.org/repo/deb/debian/freeswitch_archive_g0.pub  -O - | apt-key add -
 RUN echo "deb http://files.freeswitch.org/repo/deb/freeswitch-1.6/ jessie main" > /etc/apt/sources.list.d/freeswitch.list
 
