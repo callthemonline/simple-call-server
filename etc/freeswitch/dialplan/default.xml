@@ -1,0 +1,22 @@
+<include>
+  <context name="default">
+
+    <!-- STEREO 48kHz conferences / Video MCU -->
+    <extension name="cdquality_conferences">
+      <condition field="destination_number" expression="^(35|36\d{2})$">
+        <action application="answer"/>
+        <action application="conference" data="$1-${domain_name}-${uuid}@video-mcu-stereo"/>
+      </condition>
+    </extension>
+
+    <extension name="42_conferences">
+      <condition field="destination_number" expression="^(42)$">
+        <action application="answer"/>
+        <action application="conference" data="$1-${domain_name}-${uuid}@video-mcu-stereo"/>
+      </condition>
+    </extension>
+
+    <X-PRE-PROCESS cmd="include" data="default/*.xml"/>
+  </context>
+</include>
+

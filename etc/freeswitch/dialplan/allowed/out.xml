@@ -1,0 +1,13 @@
+<include>
+
+<extension name="ukmob">
+    <condition field="destination_number" expression="^(\+44\d+)$">
+    <action application="set" data="RECORD_STEREO=true"/>
+    <action application="record_session" data="$${recordings_dir}/archive/${strftime(%Y-%m-%d-%H-%M-%S)}_${destination_number}_${caller_id_number}.wav"/>
+    <action application="answer"/>
+    <action application="playback" data="silence_stream://2000"/>
+    <action application="bridge" data="{absolute_codec_string='PCMU'}sofia/gateway/z/$1"/>
+    </condition>
+</extension>
+
+</include>

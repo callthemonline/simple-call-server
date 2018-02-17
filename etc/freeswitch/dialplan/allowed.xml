@@ -1,0 +1,15 @@
+<include>
+  <context name="allowed">
+
+    <!-- STEREO 48kHz conferences / Video MCU -->
+    <extension name="cdquality_conferences">
+      <condition field="destination_number" expression="^(3\d{3})$">
+        <action application="answer"/>
+        <action application="conference" data="$1-${domain_name}-${uuid}@video-mcu-stereo"/>
+      </condition>
+    </extension>
+
+    <X-PRE-PROCESS cmd="include" data="allowed/*.xml"/>
+  </context>
+</include>
+
