@@ -17,8 +17,7 @@
 
     <list name="domains" default="deny">
       <node type="allow" cidr="127.0.0.1/32"/>
-      <node type="allow" cidr="10.52.0.0/22"/>
-      <node type="allow" cidr="10.132.0.0/22"/>
+      <node type="allow" cidr="10.0.0.0/8"/>
     </list>
 
   </network-lists>
