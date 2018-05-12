@@ -139,8 +139,8 @@
     <!-- NEEDS DOCUMENTATION -->
 
     <!-- RTP port range -->
-    <param name="rtp-start-port" value="10100"/>
-    <param name="rtp-end-port" value="10110"/>
+    <param name="rtp-start-port" value="31100"/>
+    <param name="rtp-end-port" value="31110"/>
 
     <param name="rtp-enable-zrtp" value="false"/>
 
